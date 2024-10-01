@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "sentence recorder",
+    "version": "1.0",
+    "description": "record sentence and words to help you learn english",
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ],
+    "commands": {
+        "panel": {
+            "suggested_key": {
+                "default": "Ctrl+R",
+                "mac": "Command+R",
+                "windows": "Ctrl+R"
+            },
+            "description": "唤起记录界面"
+        }
+    }
+}
