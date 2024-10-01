@@ -4,9 +4,8 @@
     "version": "1.0",
     "description": "record sentence and words to help you learn english",
     "permissions": [
-        "declarativeNetRequest",
-        "declarativeNetRequestFeedback",
-        "storage"
+        "storage",
+        "activeTab"
     ],
     "background": {
         "service_worker": "service-worker.js"
@@ -19,13 +18,19 @@
         "https://*/*"
     ],
     "commands": {
-        "panel": {
+        "show-record-pannel": {
             "suggested_key": {
-                "default": "Ctrl+R",
-                "mac": "Command+R",
-                "windows": "Ctrl+R"
+                "default": "Ctrl+Shift+Y",
+                "mac": "Command+Shift+Y",
+                "windows": "Ctrl+Shift+Y"
             },
-            "description": "唤起记录界面"
+            "description": "唤起操作界面"
         }
+    },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
     }
+  ]
 }

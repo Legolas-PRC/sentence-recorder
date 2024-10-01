@@ -1,0 +1,1 @@
+const SHOW_PANNEL_EVENT_NAME = 'show-record-pannel';
